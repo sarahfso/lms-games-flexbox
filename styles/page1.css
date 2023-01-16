@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   padding: 16px;
@@ -23,13 +27,15 @@ nav {
 
 nav a:hover {
   background: #fff;
+  opacity: 0.6;
 }
 
-img {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  margin: 24px;
+.game img {
+  max-width:250px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+  margin: 10px;
 }
 
 .container {
@@ -40,12 +46,15 @@ img {
 .menu-left {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  flex-grow: 1;
+  width: 200px;
+
+  border-right: solid rgb(255, 127, 80, 0.5);
 }
 
 .menu-left a:hover {
-  background: #fafaf1;
-  opacity: 0.8;
+  background:cadetblue;
+  opacity: 0.4;
 }
 
 .content {
@@ -54,12 +63,17 @@ img {
   flex-grow: 3;
 
   flex-wrap: wrap;
+
+  justify-content: center;
 }
 
 .menu-right {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 200px;
+
+  border-left: solid rgb(255, 127, 80, 0.5);
 }
 
 .red:hover {
